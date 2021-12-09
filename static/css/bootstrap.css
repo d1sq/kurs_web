@@ -2,9 +2,9 @@
 
 :root {
   /* --bs-lorem: #ffa088;  */
-  --bs-lorem: #161618;
+  --bs-lorem: #500d77;
   /* --bs-lorem: #ffaf9c;  */
-  /* --bs-ipsum: #CAD8DE; */
+  --bs-ipsum: #CAD8DE;
   --bs-ipsum: #CAD8DE;
   --bs-ipsum-dark: #8dadbb;
   --bs-blue: #0d6efd;
@@ -19,7 +19,7 @@
   --bs-cyan: #0dcaf0;
   --bs-white: #fff;
   --bs-gray: #6c757d;
-  --bs-gray-dark: #343a40;
+  --bs-gray-dark: #46034d;
   --bs-primary: #ffa088;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
@@ -28,7 +28,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   /* --bs-dark: #212529; */
-  --bs-dark: #28292b;
+  --bs-dark: #600f80;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -203,11 +203,11 @@ sup {
 }
 
 a {
-  color: #0d6efd;
+  color: #d6d6d6;
   text-decoration: underline;
 }
 a:hover {
-  color: #0a58ca;
+  color: #9111db;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -2943,13 +2943,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #ffa088;
-  border-color: #ffa088;
+  background-color: #880ca7;
+  border-color: #3d0342;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #9badff;
-  border-color: #9badff;
+  background-color: #5f12b8;
+  border-color: rgb(208, 208, 209);
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -4205,12 +4205,12 @@ textarea.form-control-lg {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-light .navbar-text {
-  color: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.55);
 }
 .navbar-light .navbar-text a,
 .navbar-light .navbar-text a:hover,
 .navbar-light .navbar-text a:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .navbar-dark .navbar-brand {
@@ -7372,7 +7372,7 @@ textarea.form-control-lg {
 }
 
 .text-dark {
-  color: var(--bs-dark) !important;
+  color: white !important;
 }
 
 .text-white {

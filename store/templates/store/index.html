@@ -1,48 +1,53 @@
-{% extends 'layout.html' %}
-{% load static %}
-{% block content %}
-
+{% extends 'layout.html' %} {% load static %} {% block content %}
 <style type="text/css">
-.card:hover{
-    transition: 200ms;
-    filter:brightness(1.2)
-}
-
+  .card:hover {
+    transition: 150ms;
+    filter: brightness(1.1);
+  }
 </style>
-
-
-<div class="row p-4 bg-dark d-flex align-items-center" style="height: 400px;">
-    <div>
-        <h1 class="text-center anim-short" style="color: #8dadbb"><strong>Lorem Ipsum</strong> <span class="text-ipsum">store</span></h1>
-        <h5 class='lead text-center text-ipsum anim-long'>best Lorem Ipsum you can get on the internet</h5>
-    </div>
+<div class="row p-4 bg-dark d-flex align-items-center">
+  <div>
+    <img
+      class="main_img"
+      src="https://static.wikia.nocookie.net/disney/images/1/1f/Once_Upon_a_Time_in_Wonderland.jpg/revision/latest?cb=20140901185224"
+      alt=""
+    />
+  </div>
 </div>
+<div class="row p-2 d-flex justify-content-center">
+  <h4 class="text-light lead text-center m-2">Каталог</h4>
+  {% for product in products %}
 
+  <div
+    class="col-sm-8 col-md-5 col-lg-3 col-xl-3 card text-black m-2 p-1 bg-dark"
+    style="flex-grow: 1; box-shadow: 0px 4px 8px #131313b7"
+  >
+    <a href="{% url 'item_detail' product.id %}" class="text-decoration-none">
+      <div
+        class="rounded"
+        style='background-image: url("{{ product.img_url }}"); width: 100%; background-position: center; background-size: cover; height: 260px;'
+      ></div>
 
-<div class="row  p-2 d-flex justify-content-center">
-    <h4 class='text-light lead text-center m-2'>check out our products</h4>
-    {% for product in products %}
-
-    <div class="col-sm-8 col-md-5 col-lg-3 col-xl-3 card text-black m-2 p-1 bg-dark" style="flex-grow: 1; box-shadow: 0px 4px 8px #131313b7; ">
-        <a href="{% url 'item_detail' product.id %}" class="text-decoration-none">
+      <div class="card-body">
+        <div class="text-center">
+          <h5 class="card-title text-light">{{product.sentence}}</h5>
+          <p class="mb-4">{{product.name}}</p>
+        </div>
         <div
-            class="rounded"
-            style='background-image: url("{{ product.img_url }}"); width: 100%; background-position: center; background-size: cover; height: 260px;'>
+          class="
+            d-flex
+            justify-content-between
+            total
+            font-weight-bold
+            mt-4
+            text-light
+          "
+        >
+          <span>Цена</span><span>{{product.price}} RUB</span>
         </div>
-
-        <div class="card-body">
-            <div class="text-center">
-            <h5 class="card-title text-light">{{product.sentence}}</h5>
-            <p class="text-muted mb-4 anim-long">{{product.name}}</p>
-            </div>
-            <div class="d-flex justify-content-between total font-weight-bold mt-4 text-light">
-            <span>Price</span><span>{{product.price}} RUB</span>
-            </div>
-        </div>
-        </a>
-    </div>
-    {% endfor %}
+      </div>
+    </a>
+  </div>
+  {% endfor %}
 </div>
-
-
 {% endblock %}
